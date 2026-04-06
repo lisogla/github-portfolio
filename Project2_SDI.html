@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SDI Project</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">ePortfolio Lisa G.</a>
+    <div>
+      <a class="nav-link d-inline" href="#">Projekte</a>
+      <a class="nav-link d-inline" href="#">CV</a>
+      <a class="nav-link d-inline" href="#">Kontakt</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PROJEKT DETAIL -->
+<div class="container my-5">
+
+  <!-- Titel -->
+  <h1 class="mb-3">Visualization of Salzburg Tourism Regions with Integrated Demographic Data</h1>
+  <p class="text-muted">A group project with Tianshu Z. & Maciej G. in the class "Spatial Data Infrastructure" winterterm 25/26. </p>
+  <!-- Großes Titelbild -->
+  <figure>
+        <img src="eportfolio_bilder/P02_title.png" class="img-fluid rounded" alt="">
+        <figcaption class="text-muted small mt-2">
+          Photo by Jiuguang Wang.
+        </figcaption>
+      </figure>
+
+  <!-- Abschnitt 1 -->
+  <div class="row align-items-center mb-5">
+    <div class="col-12">
+      <h3>Introduction</h3>
+        <div class="card-body">
+          <p>
+            This project was developed within  course "IP SDI Services Implementation", with a focus on the design and implementation of a spatial data infrastructure (SDI). 
+            A key requirement was to incorporate demographic data, including population density, household structures, as well as age and gender distribution.
+          </p>
+          <p>
+            Our group chose to explore a topic related to tourism in Salzburg, combining these demographic aspects with spatial analysis. 
+            Since the course also emphasized project management, this project not only reflects our technical implementation but also our collaborative planning and organizational approach.
+          </p>
+          <p>
+            Continue reading to learn more about both the project itself and the project management methods we applied. Please note that the resulting Dashboard cannot be shared to the public. Screenshots will be presented instead.
+          </p>
+        </div>
+    </div>
+
+   
+  </div>
+
+  <!-- Abschnitt 2 (Bild links) -->
+  <div class="row align-items-center mb-5 flex-md-row-reverse">
+    <div class="col-md-6">
+      <h3>Project Description</h3>
+      <div class="card-body">
+          <p>
+            This project investigates the spatial and demographic impacts of tourism in the Salzburg Land region, with a specific focus on the year 2024 for tourism data. An SDI-based approach was used to aggregate municipalities into standardized tourism regions and to enrich them with demographic, labour market, housing, and tourism-related indicators.
+            The project integrates geospatial boundary data, official statistics, and tourism performance data into a standardized dataset covering three spatial levels: municipalities (GEM), tourism regions (TR), and tourism districts (TB). The processed data is visualized through an interactive web-based dashboard to support regional comparison and exploration of tourism-related pressure.
+            By combining tourism, demographic, and labour market information in a single SDI framework, the project contributes to improved transparency and accessibility of tourism-related spatial information for regional analysis and planning purposes. 
+          </p>
+          
+        <h4>Project Purpose, Benefits and Target Group</h4> 
+            <p>
+              The purpose of this project is to create an accessible and standardized geospatial information base that supports the analysis of tourism impacts in Salzburg Land. The integrated dataset and dashboard provide evidence-based insights into tourism intensity, accommodation structures, demographic characteristics, and housing-related indicators.
+              The main benefit of the project lies in enabling users to better understand the relationship between tourism activity and local demographic and socio-economic structures. By presenting information at multiple spatial levels, the project supports comparison between regions and identification of areas with higher tourism pressure.
+              The primary target groups are: <b> Municipal authorities, Regional and tourism planning institutions, Tourism boards and destination management organizations</b>
+            </p>
+        <h4> Project Objectives</h4> 
+            <p> 
+              The overall objective of the project is to develop a standardized SDI-based dataset and visualization system for assessing tourism-related impacts in Salzburg Land.
+              The specific objectives include:
+            </p> 
+              <ul class="ps-3">
+              <li>Aggregating municipalities into officially recognized tourism regions and tourism districts </li>
+              <li>Integrating demographic indicators such as population structure and population density</li>
+              <li> Integrating tourism performance indicators including arrivals, overnight stays, and accommodation types </li>
+              <li>Integrating labour market and housing-related contextual data </li>
+              <li>Computing tourism-oriented Key Performance Indicators (KPIs) </li>
+              <li>Implementing an interactive dashboard based on SDI standards to support regional comparison </li>
+            </ul>
+
+              
+        </div>
+      </div>
+    <div class="col-md-6">
+      <figure>
+        <img src="eportfolio_bilder/P02_studyarea.png" class="img-fluid rounded" alt="">
+        <figcaption class="text-muted small mt-2">
+          Figure: Visualization of Communities, Touristic Regions and Touristic Districts in Salzburg, created by Maciej G.
+        </figcaption>
+      </figure>
+      
+    </div>
+  </div>
+
+  <!-- Abschnitt 3 -->
+  <div class="row align-items-center mb-5">
+    <div class="col-12">
+      <h3>Data</h3>
+        <div class="card-body">
+          <p> 
+            The data was collected from official statistical and geospatial sources and processed to support the integration of tourism, demographic, and labour market information for Salzburg Land.
+          </p>
+          <h3>Metadata and Standards</h3> 
+            <p>
+              Metadata records were created for all key datasets using standardized metadata formats. Metadata includes information on data sources, processing steps, spatial reference, and attribute definitions.
+              The metadata supports transparency and reuse of the project outputs and is stored alongside the datasets in the project repository.
+            </p>
+        </div>
+    </div>
+
+     
+  </div>
+
+  <!-- Abschnitt 4 -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6">
+      <h3>SDI Architecture</h3>
+        <div class="card-body">
+          <p> 
+            The SDI was designed to support standardized data management, service publication, and visualization of tourism-related indicators, while ensuring interoperability and documentation in line with SDI principles.
+            The architecture follows a layered approach, separating data storage, processing, service publication, and visualization components.
+          </p>          
+          <p>
+            The SDI architecture consists of multiple functional layers, each responsible for a specific part of the data lifecycle. From data preparation to visualization, each layer interacts through standardized interfaces.
+            The main components of the architecture include: 
+          </p>
+          <ul class="ps-3">
+            <li>Data processing and preparation tools</li>
+            <li>Data processing and preparation tools </li>
+            <li>Spatial databases for structured data storage </li>
+            <li>OGC-compliant services for data access </li>
+            <li>A web-based dashboard for visualization</li> 
+          </ul>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+      <figure>
+    <img src="eportfolio_bilder/P02_SDI_Architecture.png" class="img-fluid rounded" alt="SDI Architecture">
+    <figcaption class="text-muted small mt-2">
+      Figure: Overview of the SDI architecture developed in the project.
+    </figcaption>
+  </figure>
+  </div>
+
+ <!-- Abschnitt 5 (Bild links) -->
+  <div class="row align-items-center mb-5 flex-md-row-reverse">
+    <div class="col-md-6">
+      <h3>Dashboard & Visualization</h3>
+      <div class="card-body">
+          <p>
+           The dashboard prototype represents the final visualization outcome of the project. 
+           It integrates spatial data and tourism-oriented KPIs through SDI services and provides an interactive environment for exploring tourism–demographic dynamics in Salzburg Land.
+          </p>
+        <h4>Dashboard Concept</h4> 
+          <p>
+            The dashboard supports comparative analysis between tourism regions and tourism districts by combining maps, charts, and key indicators. The visualization focuses on tourism intensity, accommodation structure, and demographic context.
+          </p>
+        <h4>Target User Perspective</h4> 
+          <p> 
+            The dashboard design was guided by a representative user persona reflecting a regional tourism planning perspective.
+            The visualization emphasizes intuitive interaction and clear presentation over advanced analytical functionality.
+          </p> 
+        <h4>Visualization Elements</h4>
+          <p>
+            The interactive dashboard includes:
+          </p>
+          <ul class="ps-3">
+            <li>Interactive maps of tourism regions and tourism districts</li>
+            <li>Thematic layers representing selected KPIs</li>
+            <li>Charts supporting regional comparison</li>
+          </ul>
+
+              
+        </div>
+      </div>
+    <div class="col-md-6">
+      <figure>
+        <img src="eportfolio_bilder/P02_Dashboard01.png" class="img-fluid rounded" alt="">
+        <img src="eportfolio_bilder/P02_Dashboard02.png" class="img-fluid rounded" alt="">
+        <figcaption class="text-muted small mt-2">
+          Figure: Screenshots of the final dashboard design.
+        </figcaption>
+      </figure>
+      
+    </div>
+  </div>
+
+
+  <!-- Abschnitt 6 -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6">
+      <h3>Project Management</h3>
+        <div class="card-body">
+          <p>
+            Project management played a crucial role in coordinating our team of three students, especially given our different schedules. 
+            We approached the assignment as a real-world project, defining clear deadlines, deliverables, and an overall project structure.
+          </p>
+
+          <p>
+            To organize our work, we used timesheets to track individual contributions, created a work package structure, and developed Gantt charts to plan and monitor progress. 
+            Regular presentations helped us stay aligned and communicate our results effectively.
+          </p>
+
+          <p>
+            We used GitLab for version control and collaboration, enabling us to manage our code, track changes, and work efficiently as a team.
+          </p>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+      <figure>
+    <img src="eportfolio_bilder/P02_WPS.png" class="img-fluid rounded" alt="WPS diagramme">
+    <figcaption class="text-muted small mt-2">
+      Figure: Overview of Workpackages.
+    </figcaption>
+  </figure>
+  </div>
+
+  
+
+  <!-- Fazit -->
+  <div>
+    <h3>Conclusion</h3>
+    <p>
+      This was such a huge project. The main challenge was staying true to the original idea while still meeting our defined objectives. Project management took up a lot of time, but as is often the case, it’s a crucial part of making a project successful. Luckily, our group worked well together, and we were able to divide the tasks fairly—from data searching and processing to developing the SDI architecture, database management, and documentation (and more).
+      We’re happy with how our dashboard turned out. Special thanks to Maciej, who put a lot of effort into both the design and functionality of the dashboard - experience builder was tricky quite a few times. One downside that is remaining is the long loading time for the WFS layer, and the dashboard occasionally crashes. However, with some deeper analysis and a few optimizations, this can definitely be improved.
+    <p>
+  </div>
+
+  <!-- Technologien -->
+  <div class="mb-5">
+    <span class="badge badge-tech">ArcGIS Pro</span>
+    <span class="badge badge-tech">ArcGIS Online</span>
+    <span class="badge badge-tech">GeoServer</span>
+    <span class="badge badge-tech">PostgreSQL</span>
+    <span class="badge badge-tech">Microsoft 365</span>
+    <span class="badge badge-tech">Experience Builder</span>
+    <span class="badge badge-tech">GitLab</span>
+  </div>
+
+</div>
+
+
+</body>
+</html>

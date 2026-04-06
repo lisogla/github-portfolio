@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CalFire Project</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">ePortfolio Lisa G.</a>
+    <div>
+      <a class="nav-link d-inline" href="#">Projekte</a>
+      <a class="nav-link d-inline" href="#">CV</a>
+      <a class="nav-link d-inline" href="#">Kontakt</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PROJEKT DETAIL -->
+<div class="container my-5">
+
+  <!-- Titel -->
+  <h1 class="mb-3">A Web Application to Explore and Analyze 2024 California Wildfire Data</h1>
+  <p class="text-muted">A group project with Anne K. in the class "Application Development" in summerterm 25. </p>
+  <!-- Großes Titelbild -->
+  <figure>
+        <img src="eportfolio_bilder/P03_forestfire_title.jpg" class="img-fluid rounded" alt="">
+        <figcaption class="text-muted small mt-2">
+          Image by vecstock on Freepik.
+        </figcaption>
+      </figure>
+
+  <!-- Abschnitt 1 -->
+  <div class="row align-items-center mb-5">
+    <div class="col-12"> 
+      <h3>Introduction</h3>
+        <div class="card-body">
+          <p>
+            An increase in temperature due to climate change has also led to a rise in the number of wildfires worldwide. California is also in the news every year due to wildfires across the state. 
+            The state already provides several interactive dashboards for private users to view historical and current fire events (<a href="https://gis.data.cnra.ca.gov/apps/CALFIRE-Forestry::explore-california-historical-wildland-fire-perimeters-app/explore">see official Dashboard</a>). 
+            The dashboard of California's Fire Department can be explored by the user to gain more information about fires. However, their resolution is based on an ESRI product. 
+ 
+            <p>
+            For this class, we wanted to develop an open-source application that is free from proprietary products. 
+            The underlying research question is: <i> how can we provide fire data from 2024 for the state of California in an interactive, user-friendly WebGIS application that enables users to explore fire locations, causes, affected areas and containment dates based on open-source products? </i>
+            </p>
+        </div>
+     </div> 
+
+    <!-- <div class="col-md-6">
+      <img src="https://via.placeholder.com/600x400" class="img-fluid rounded" alt="">
+    </div>
+  </div> 
+  -->
+
+  <!-- Abschnitt 2 -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6"> 
+      <h3>Methods</h3>
+        <div class="card-body">
+          <p>
+          The project is implemented as a browser-based WebGIS application using JavaScript and libraries such as Leaflet and Turf.js for the frontend. For the backend, Python with GeoDjango is used for data management. 
+          </p>
+          <h4>Backend (Python / GeoDjango)</h4>
+           <ul> 
+            <li> <b>Data storage:</b> official wildfire data from California's wildfire department is stored in a PostGIS-enabled PostgreSQL database for efficient spatial queries.</li>
+            <li> <b>Data preparation & preprocessing:</b> A geoapp was created with the Django framework. Two models were defined for two datasets (wildfire perimeters (polygons)& damaged buildings (points)). Pre-processing on the server side ensures that attributes are cleaned and standardized before sending them to the frontend.</li>
+            <li> <b>API endpoints:</b> Django REST Framework (DRF) endpoints, such as <i>/api/wildfires/  </i> were created, to return data in GeoJSON format. Filter parameters (e.g., cause=, start_date=) can be passed via query strings.</li>
+            <li> <b>Integretion with Leaflet:</b> The frontend fetches GeoJSON from these endpoints using fetch() calls and dynamically updates the map layer without reloading the page.</li>
+           </ul>
+
+          <h4>Frontend (JavaScript / Leaflet / Turf.js)</h4>
+          <p>
+           The frontend structure is made of a base.html where the base structure is configured, an authors.html and a map.html, where we linked all documents together, as well as styling and configuring the legend, sidebar and infocard.The JavaScript file called map.js contains most of the code connecting backend and frontend. 
+           </p>
+           <p>
+            <ul> 
+              <li> <b>Map setup:</b> Leaflet was used to create the open-source base map layers, load wildfire polygons, damage points and style them dynamically.</li>
+              <li> <b>Filtering functionality:</b> A dropdown menu allows filtering by wildfire cause, updating the map layer in real time.</li>
+              <li> <b>Proximity analysis tool:</b> A custom Leaflet control was implemented to let the user input a radius (in km). When clicking on the map, Turf.js will generate a buffer around the click point, and all intersecting wildfires will be identified and highlighted (Figure 1). </li>
+              <li> <b>User interaction:</b> For each intersecting fire, a popup displays the key attributes name of the fire and alarm date. Non-intersecting fires will revert to default styling. When clicking on wildfires or mapped buildings in general, according popups provide information (Figure 2).</li>
+            </ul>
+          </p>
+        </div>  
+     </div> 
+
+     <div class="col-md-6">
+      <figure>
+        <img src="eportfolio_bilder/P03_proximityTool.png" class="img-fluid rounded" alt="">
+        <figcaption class="text-muted small mt-2">
+          Figure 1: A buffer appears with a defined distance, when the user clicks anywhere on the map. A pop-up provides additional information.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="eportfolio_bilder/P03_userinteraction.png" class="img-fluid rounded" alt="">
+        <figcaption class="text-muted small mt-2">
+          Figure 2: Polygons (wildfires) and points (buildings) can be clicked. A pop-up shows ub with further details.
+        </figcaption>
+      </figure>
+
+    </div>
+  </div> 
+
+  <!-- Abschnitt 3 -->
+  <div class="row align-items-center mb-5">
+    <div class="col-12"> 
+      <h3>Result</h3>
+        <div class="card-body">
+          <p>
+           I would have liked to share a link to the live web application, but since GitHub Pages only supports static frontend sites, this was not possible. Instead, the following video showcases the final result.
+          </p>
+        </div>
+
+     <div class="ratio ratio-16x9">
+  <video controls>
+    <source src="eportfolio_bilder/P03_videoDemo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+     </div> 
+
+  
+  <!-- Fazit -->
+  <div>
+    <h3>Conclusion</h3>
+    <p>
+    This project was a highly rewarding experience. While it came with several challenges that required significant time and effort to resolve, the results ultimately made the work worthwhile.
+    One of the most valuable aspects of this project was gaining a deeper understanding of how frontend and backend components interact within a web application. Working with a development server and the Django framework was new to me, but through continuous practice and the use of tutorials, I was able to build a solid understanding.
+    Additionally, the use of generative AI tools proved very helpful in debugging and problem-solving, significantly reducing development time.
+    Maybe - when there is more time - I will extent the functions to enable more analyzes And also publish it properly on the web and not just as a video!
+    The source code for this project is available on my  <a href="https://github.com/lisogla/Final_Project_Application_Development_Wildfires/tree/master">GitHub.</p>
+  </div>
+
+  <!-- Technologien -->
+  <div class="mb-5">
+    <span class="badge badge-tech">HTML</span>
+    <span class="badge badge-tech">JavaScript</span>
+    <span class="badge badge-tech">Leaflet</span>
+    <span class="badge badge-tech">Python</span>
+    <span class="badge badge-tech">GeoDjango</span>
+    <span class="badge badge-tech">PostgreSQL</span>
+  </div>
+
+</div>
+
+
+</body>
+</html>

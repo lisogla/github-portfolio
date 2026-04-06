@@ -1,0 +1,198 @@
+:root {
+  --primary: #3e8f8c;     /* teal */
+  --secondary: #b164a8;   /* purple */
+  --accent-light: #eef2ff;
+  --text-muted: #6c757d;
+}
+
+#cv {
+  background: #3e8f8c33;
+  padding: 40px;
+  border-radius: 15px;
+  }
+
+  #projects {
+    background: #3e8f8c33;
+    padding: 40px;
+    border-radius: 15px;
+  }
+  
+  body {
+      background: linear-gradient(to right, #f8f9fa, #eef2ff);
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #3e8f8c;
+    }
+
+    .navbar a {
+      color: white !important;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .hero {
+    text-align: center;
+    padding: 60px 20px;
+    }
+
+    .hero-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%; /* makes it circular */
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #fff;
+    }
+
+    /* Projektkarten */
+    .project-image {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .image-container {
+    position: relative;
+    }
+
+
+    .card {
+    border: none;
+    border-radius: 12px;
+    background-color: #ffffff;
+    border-left: 4px solid var(--primary); /* 👈 THIS is the magic */
+  }
+
+  .card-title {
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  
+
+  .card-body p {
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.6;
+  }
+
+  .card {
+    border: none;
+    border-radius: 12px;
+  }
+
+
+  .card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  }
+
+  .badge-tech {
+    background: #3e8f8c5b;
+    color: #4b4b4b;
+    margin-right: 5px;
+  }
+
+  .custom-btn {
+    background-color: #b164a8;   /* your color */
+    color: white;
+    border: none;
+  }
+
+  .custom-btn:hover {
+    background-color:  #7e2374;   /* darker on hover */
+    color: white;
+  }
+
+  .custom-outline-btn {
+    border: 1px solid #b164a8;  /* border color */
+    color: #b164a8;             /* text color */
+    background-color: transparent;
+    transition: 0.3s;
+  }
+
+  .custom-outline-btn:hover {
+    background-color: #b164a8;  /* fill on hover */
+    color: white;
+  }
+
+  /* Section Titel */
+  .section-title {
+    color:#b164a8;
+    text-align: center; 
+    margin: 10px 0 40px;
+    font-weight: bold;
+  }
+
+    hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+}
+
+/* Links */
+    a {
+  color: #ccacc8;
+  background-color: none;
+  text-decoration: none;
+  }
+
+  a:hover {
+  text-decoration: underline;
+  }
+
+  .section-title {
+  font-weight: 600;
+  }
+
+  
+
+
+  /* Button standardmäßig versteckt */
+    .view-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+      /* Beim Hover sichtbar */
+      .image-container:hover .view-btn {
+        opacity: 1;
+      }
+
+    .view-btn:hover {
+      opacity: 0.5;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      padding: 30px;
+      background: #3e8f8c;
+      color: white;
+      text-align: center;
+    }
+
+  

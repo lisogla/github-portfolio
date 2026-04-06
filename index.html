@@ -1,58 +1,445 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ePortfolio Lisa G.</title>
 
-    <style>
-      .project-image{
-        height: 200px;
-        object-fit: contain;
-      }
-    </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-  </head>
-  <body>
-    <!-- As a link -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">CV</a>
-            <a class="nav-link" href="#">University</a>
-     
-         
-         
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">ePortfolio Lisa G.</a>
+    <div>
+      <a class="nav-link d-inline" href="#projects">Projects</a>
+      <a class="nav-link d-inline" href="#cv">CV</a>
+      <!--<a class="nav-link d-inline" href="#">Kontakt</a> -->
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <img src="eportfolio_bilder/hero.JPG" alt="Photo of Lisa" class="hero-img">
+  <h1>Hi, I am Lisa</h1>
+  <p>I love to create and design geovisualizations!</p>
+  <a href="#projects" class="btn custom-btn">My projects</a>
+</div>
+
+
+<!-- CV SECTION -->
+<div class="container my-5" id="cv">
+  <h2 class="section-title text-center mb-5">Curriculum Vitae</h2>
+
+  <div class="row g-4">
+
+    <!-- COLUMN 1: Profile + Skills -->
+    <div class="col-md-4">
+
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Profile</h5>
+          <p class="card-text">
+           I am a geovisualization enthusiast with a strong background in GIS and cartographic design, and I enjoy exploring web development and tackling programming challenges.
+          </p>
+        </div>
+      </div>
+
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Skills</h5>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge badge-tech">ArcGIS Pro</span>
+            <span class="badge badge-tech">QGIS</span>
+            <span class="badge badge-tech">Python</span>
+            <span class="badge badge-tech">R</span>
+            <span class="badge badge-tech">Adobe Illustrator</span>
+            <span class="badge badge-tech">Affinity</span>
+            <span class="badge badge-tech">SQL</span>
+            <span class="badge bg-light text-dark">...and many more programs that were thaught in Uni</span>
           </div>
         </div>
       </div>
-    </nav>
 
-    <div class="container">
-      <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-md-3">
-        <div class="col" repeat="3">
-          <div class="card shadow-sm">
-              <img class = "project-image" src="eportfolio_bilder/Projekt{index}.jpg">
-              <div class="card-body">
-                <div class="text-black-50">
-                  Wireless Headphone
-                </div>
-                <b> Product name</b>
-              </div>
+    </div>
+
+    <!-- COLUMN 2: Experience -->
+    <div class="col-md-4">
+
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">Experience</h5>
+
+          <div class="mb-3">
+            <strong>Research Assistant</strong><br>
+            <small class="text-muted">University of Salzburg · 2025</small>
           </div>
+
+          <div class="mb-3">
+            <strong>Working Student – GIS</strong><br>
+            <small class="text-muted">Prof. Schaller UmweltConsult · 2023–2024</small>
+          </div>
+
+          <div class="mb-3">
+            <strong>GIS Intern</strong><br>
+            <small class="text-muted">Prof. Schaller UmweltConsult · 2022–2023</small>
+          </div>
+
+          <div>
+            <strong>Teaching Assistant – Cartography</strong><br>
+            <small class="text-muted">Munich University of Applied Sciences · 2020–2021</small>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COLUMN 3: Education -->
+    <div class="col-md-4">
+
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          
+          <!-- Education -->
+          <h5 class="card-title">Education</h5>
+
+          <div class="mb-3">
+            <strong>MSc Applied Geoinformatics</strong><br>
+            <small class="text-muted">University of Salzburg · 2024–Present</small>
+          </div>
+
+          <div class="mb-4">
+            <strong>BEng Geovisual Design - Geomatics 
+              <small>(aka Cartography & Geomediatechnology)</small>
+            </strong><br>
+            <small class="text-muted">Munich University of Applied Sciences · 2019–2024</small><br>
+            <small>Grade: 1.5</small>
+          </div>
+
+          <!-- Divider -->
+          <hr>
+
+          <!-- Languages -->
+          <h5 class="card-title mt-3">Languages</h5>
+
+          <div class="d-flex flex-column gap-1">
+            <span>German – Native</span>
+            <span>English – Fluent (C1)</span>
+            <span>Thai – Basic (learning)</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+      </div>
+    </div>
+
+<!-- PROJEKTE -->
+<div class="container" id="projects">
+
+  <h2 class="section-title">My projects</h2>
+
+  <div class="row g-4">
+
+    <!-- Sichtbare Projekte -->
+    <!-- Projekt 1 -->
+    <div class="col-md-4 project item">
+      <div class="card">
+        <div class="image-container">
+          <img class="project-image" src="eportfolio_bilder/P01_final_map_design_page1.png">
+            <button class="btn btn-light btn-sm view-btn"
+              data-bs-toggle="modal" 
+              data-bs-target="#projectModal"
+              data-images="eportfolio_bilder/P01_final_map_design_page1.png,eportfolio_bilder/P01_1_final_map_design.jpg,eportfolio_bilder/P01_2_webmap.png">
+              <!-- button von bootstrap -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707m0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707m-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707"/>
+                </svg>
+            </button>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Map & Web Map: Visualizing Mountain Ecosystem Stability</h5>
+          <p class="text-muted">This project was developed during the 'Advanced Cartography' class in WS25/26. This class challenged us students to choose a Sustainable Development Goal (SDG) and create a static, printable map and an interactive web map. 
+            With eye-tracking, the design and usability could be improved by being able to quantify feedback, which would allow for more accurate assessment of the user experience.
+          </p>
+              <div class="mb-2">
+              <span class="badge badge-tech">HTML</span>
+              <span class="badge badge-tech">CSS</span>
+              <span class="badge badge-tech">Leaflet</span>
+              <span class="badge badge-tech">Affinity</span>
+              <span class="badge badge-tech">ArcGIS Pro</span>
+            </div>
+          <a href="https://storymaps.arcgis.com/stories/988b2d4aa22e41e092c884c5d7486957" class="btn btn-sm custom-outline-btn">Details</a>
+          <a href="https://lisogla.github.io/Adv-Cartography-Web-Map-SDG-15/" class="btn btn-sm custom-outline-btn">Web Map</a>
         </div>
       </div>
     </div>
 
-       
-    <script src="https://cdn.developerakademie.com/libs/repeat.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-  </body>
+    <!-- Projekt 2 -->
+    <div class="col-md-4 project item">
+      <div class="card">
+        <div class="image-container">
+          <img class="project-image" src="eportfolio_bilder/P02_Dashboard01.png">
+          <button class="btn btn-light btn-sm view-btn"
+              data-bs-toggle="modal" 
+              data-bs-target="#projectModal"
+              data-images="eportfolio_bilder/P02_Dashboard01.png,eportfolio_bilder/P02_Dashboard02.png,eportfolio_bilder/P02_SDI_Architecture.png,eportfolio_bilder/P02_studyarea.png">
+              <!-- button von bootstrap -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707m0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707m-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707"/>
+                </svg>
+            </button>
+
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Dashboard: Visualization of Salzburg Tourism Regions with Integrated Demographic Data</h5>
+          <p class="text-muted"> 
+            This group project develops a spatial data infrastructure (SDI) to analyze and visualize the relationship between tourism and demographic structures in Salzburg Land. 
+            By integrating geospatial, demographic, and tourism data, a standardized dataset was created. An interactive dashboard was built to present the data.
+          </p>
+
+          <div class="mb-2">
+            <span class="badge badge-tech">ArcGIS Pro</span>
+            <span class="badge badge-tech">ArcGIS Online</span>
+            <span class="badge badge-tech">GeoServer</span>
+            <span class="badge badge-tech">PostgreSQL</span>
+            <span class="badge badge-tech">Microsoft 365</span>
+            <span class="badge badge-tech">Experience Builder</span>
+            <span class="badge badge-tech">GitLab</span>
+          </div>
+
+          <a href="Project2_SDI.html" class="btn btn-sm custom-outline-btn">Details</a>
+            
+          </div>
+      </div>
+    </div>
+
+    <!-- Projekt 3 -->
+    <div class="col-md-4 project item">
+      <div class="card">
+        <div class="image-container">
+          <img class="project-image" src="eportfolio_bilder/P03_wildfiremap_cardtitle.png">
+          <button class="btn btn-light btn-sm view-btn"
+              data-bs-toggle="modal" 
+              data-bs-target="#projectModal"
+              data-images="eportfolio_bilder/P03_wildfiremap_1.png,eportfolio_bilder/P03_wildfiremap_2.png,eportfolio_bilder/P03_wildfiremap_3.png">
+              <!-- button von bootstrap -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707m0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707m-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707"/>
+                </svg>
+            </button>
+
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Web App: Exploring and Analyzing California's Wildfire Data</h5>
+          <p class="text-muted"> 
+          This web application is the result of the goal to create an interactive web map about wildfires in California. This web map shows the locations of fires that ocurred in 2024. The user is able to engage with the map and create bufferzones
+          to find out which residential areas were affected. Additional information about fire cause and damage are also provided.
+          </p>
+
+          <div class="mb-2">
+            <span class="badge badge-tech">HTML</span>
+            <span class="badge badge-tech">JavaScript</span>
+            <span class="badge badge-tech">Leaflet</span>
+            <span class="badge badge-tech">Python</span>
+             <span class="badge badge-tech">GeoDjango</span>
+            <span class="badge badge-tech">PostgreSQL</span>
+           
+        
+          </div>
+
+          <a href="Project3_CalFire.html" class="btn btn-sm custom-outline-btn">Details</a>
+            
+          </div>
+      </div>
+    </div>
+
+    <!-- Versteckte Projekte -->
+      <!-- Projekt 4 -->
+    <div class="col-md-4 project-item d-none">
+      <div class="card">
+        <div class="image-container">
+          <img class="project-image" src="eportfolio_bilder/P04_map1.png">
+          <button class="btn btn-light btn-sm view-btn"
+              data-bs-toggle="modal" 
+              data-bs-target="#projectModal"
+              data-images="eportfolio_bilder/P04_map1.png,eportfolio_bilder/P04_map2.png">
+              <!-- button von bootstrap -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707m0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707m-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707"/>
+                </svg>
+            </button>
+
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Maps: 2 Maps about Chiang Mai's Old Town</h5>
+          <p class="text-muted"> 
+          R is a programming language for statistics, graphics, and maps! Wait, maps with R? Yes, that was also new to me. In class, we were challenged to create an "ugly" and a "pretty map" using only R, and you can see both above. I can't say which one is uglier or prettier, though. As someone with a cartographic background, I could not bear to create a map with incorrect symbolizations or projections. 
+          So, I experimented with R to create creative maps and used additional resources, such as Stadiamaps, for the background map.
+          This was definitely a great way to learn R and experience mapmaking from a programming perspective. Before this, I only knew how to make a map using GIS or Adobe/Affinity products.
+
+          <div class="mb-2">
+            <span class="badge badge-tech">R</span>        
+          </div> 
+        </div>
+      </div>
+    </div>
+
+      <!-- Projekt 5 -->
+    <div class="col-md-4 project-item d-none">
+      <div class="card">
+        <div class="image-container">
+          <img class="project-image" src="eportfolio_bilder/P05_Liverpoolmap.png">
+          <button class="btn btn-light btn-sm view-btn"
+              data-bs-toggle="modal" 
+              data-bs-target="#projectModal"
+              data-images="eportfolio_bilder/P05_Liverpoolmap.png,eportfolio_bilder/P05_Liverpoolbackside.png">
+              <!-- button von bootstrap -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707m0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707m-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707"/>
+                </svg>
+            </button>
+
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Printmap: The Beatles - City of Liverpool </h5>
+          <p class="text-muted"> 
+            This map was designed for print and was my first major project as a university student. In my third semester (Fall 2021/Winter 2022), I was assigned Liverpool by chance. I decided to create a map for tourists who love the Beatles and want to experience the city where the Beatles grew up.
+            Three months of work went into this product, and now, five years later, I am still very proud of the map I created using only Illustrator.
+            That means I only used OpenStreetMaps as a reference, and I drew every single street, park, and building myself, not to mention the street names. 
+            Having gained more cartographic experience, I can see some issues that could be improved, but that is another topic! I will provide additional details about the map's design at a later time. For the time being, you can find an example of the map at the top of this card.
+          <div class="mb-2">
+            <span class="badge badge-tech">Adobe Illustrator</span>        
+          </div> 
+        </div>
+      </div>
+    </div>
+
+    <!-- Projekt XY -->
+
+    <div class="col-md-4 project-item d-none">
+      <div class="card">
+        <img class="project-image" src="eportfolio_bilder/Pxy.png">
+        <div class="card-body">
+          <h5 class="card-title">Project ...</h5>
+          <p class="text-muted">...stay tuned for more projects!</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BUTTON -->
+   <div class="d-flex justify-content-center mt-4">
+  <button class="btn custom-btn" onclick="toggleProjects(this)">
+    Show more projects
+  </button>
+   </div>
+</div>
+
+
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Lisa G.</p>
+  <p>
+   <a href="https://github.com/lisogla"> GitHub </a> | <a href="https://www.linkedin.com/in/lisa-glahsl-285562292">LinkedIn</a>
+  </p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+  // showmore button
+    function toggleProjects(btn) {
+        const hiddenProjects = document.querySelectorAll('.project-item');
+
+        let isHidden = false;
+
+        hiddenProjects.forEach(el => {
+          if (el.classList.contains('d-none')) {
+            isHidden = true;
+          }
+        });
+
+        hiddenProjects.forEach(el => {
+          el.classList.toggle('d-none');
+        });
+
+        if (isHidden) {
+          btn.textContent = "Show less projects";
+        } else {
+          btn.textContent = "Show more projects";
+        }
+      }
+
+  //Bilder im card carousel dynamisch zeigen
+      document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.view-btn').forEach(button => {
+        button.addEventListener('click', function() {
+
+          const images = this.getAttribute('data-images').split(',');
+          const carouselContent = document.getElementById('carouselContent');
+
+          carouselContent.innerHTML = '';
+
+          images.forEach((img, index) => {
+            const activeClass = index === 0 ? 'active' : '';
+
+            carouselContent.innerHTML += `
+              <div class="carousel-item ${activeClass}">
+                <img src="${img}" class="d-block w-100">
+              </div>
+            `;
+          });
+
+        });
+      });
+    });
+ </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+ <div class="modal fade" id="projectModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Project Pictures</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div id="carouselModal" class="carousel slide">
+          <div class="carousel-inner" & id="carouselContent">
+            <!-- wird mit JS gefüllt -->
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselModal" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+</body>
 </html>
